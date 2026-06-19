@@ -21,7 +21,7 @@ export default function Register({ onRegister, onBack }) {
         setLoading(true);
         setError("");
         try {
-            const res = await fetch("http://localhost:4001/api/auth/register", {
+            const res = await fetch("https://user-analytics-app1.onrender.com/api/auth/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name, email, password }),

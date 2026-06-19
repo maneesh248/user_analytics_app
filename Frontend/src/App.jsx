@@ -29,7 +29,7 @@ export default function App() {
     }
   }, []);
 
-  // Sync __currentPage on every page/authPage/user change
+
   useEffect(() => {
     window.__currentPage = user ? `/${page}` : `/${authPage}`;
   }, [page, authPage, user]);

@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState, useCallback, useRef as useLatest } from "react";
 
-const API = "http://localhost:4001/api";
+const API = "https://user-analytics-app1.onrender.com/api";
 
 export default function Heatmap() {
     const [url, setUrl] = useState("/");

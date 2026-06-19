@@ -1,4 +1,4 @@
-const API = "http://localhost:4001/api";
+const API = "https://user-analytics-app1.onrender.com/api";
 
 const sessionId = sessionStorage.getItem("sessionId") || Math.random().toString(36).slice(2);
 sessionStorage.setItem("sessionId", sessionId);

@@ -49,7 +49,7 @@ export default function Login({ onLogin, onCreateAccount }) {
 
         try {
             const res = await fetch(
-                "http://localhost:4001/api/auth/login",
+                "https://user-analytics-app1.onrender.com/api/auth/login",
                 {
                     method: "POST",
                     headers: {
