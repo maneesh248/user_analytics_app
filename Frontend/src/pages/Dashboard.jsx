@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API = "https://user-analytics-app1.onrender.com//api";
+const API = "https://user-analytics-app1.onrender.com/api";
 
 const KPI = [
     { key: "sessions", label: "Sessions", delta: "+12%" },
