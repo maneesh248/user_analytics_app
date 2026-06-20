@@ -94,10 +94,9 @@ Create `.env` file:
 
 ```env
 PORT=4001
-
-MONGODB_URI=your_mongodb_atlas_connection_string
-
-JWT_SECRET=your_secret_key
+MONGODB_URI=mongodb://manu_24:manu2005@ac-fwkgdk2-shard-00-00.zyyvjwd.mongodb.net:27017,ac-fwkgdk2-shard-00-01.zyyvjwd.mongodb.net:27017,ac-fwkgdk2-shard-00-02.zyyvjwd.mongodb.net:27017/?ssl=true&replicaSet=atlas-i02m3s-shard-0&authSource=admin&appName=Cluster0
+JWT_SECRET=ae8c660964a68498daf679f05b8299623dab3a573255f46069762040fd6520cd1bad0083722f19615fb711a778b13cb178dbff977e861d8765079f6e5275f1f0
+VITE_API_URL=https://user-analytics-app1.onrender.com/api
 ```
 
 Run backend server:
@@ -257,7 +256,7 @@ GET /api/heatmap?page=/dashboard
 }
 ```
 
----
+
 
 # Application Workflow
 
@@ -270,21 +269,6 @@ GET /api/heatmap?page=/dashboard
 7. Sessions page displays session-wise information.
 8. Heatmap page visualizes click coordinates.
 
----
-
-# Future Improvements
-
-- Real-time Analytics using Socket.IO
-- Advanced Heatmap Visualization
-- Session Replay
-- Export Reports (CSV/PDF)
-- User Role Management
-- Date Range Filters
-- Analytics Charts and Graphs
-- Performance Monitoring
-
----
-
 # Deployment
 
 ### Frontend
@@ -296,12 +280,38 @@ Render
 ### Database
 MongoDB Atlas
 
----
+
 ## Live Demo
 
 Frontend: https://your-vercel-url.vercel.app
 
 Backend API: https://your-render-url.onrender.com
+
+## Assumptions & Trade-offs
+
+### Assumptions
+- Each visitor is assigned a unique `sessionId` to track activity across pages.
+- User interactions (page views, clicks, and mouse movements) are captured through a client-side tracking script.
+- MongoDB Atlas is used for storing analytics data.
+- Dashboard users must be authenticated before accessing analytics data.
+- Heatmap coordinates are collected based on the browser viewport dimensions.
+- The application is designed for demonstration and small-to-medium traffic workloads.
+
+### Trade-offs
+- Used MongoDB for flexible event storage instead of a relational database, making it easier to store different event types.
+- Implemented REST APIs instead of WebSockets, prioritizing simplicity over real-time updates.
+- Stored raw event data directly in the database, which simplifies development but may require aggregation optimizations at larger scales.
+- Focused on core analytics features (Dashboard, Sessions, Heatmap) rather than advanced features such as session replay or funnel analysis.
+- Chose JWT-based authentication for a lightweight and stateless authentication system.
+- Prioritized clean architecture and maintainability over extensive feature development.
+
+### Future Enhancements
+- Real-time analytics using WebSockets.
+- Session replay functionality.
+- Date range filters and advanced analytics.
+- Export reports in CSV/PDF format.
+- User journey and funnel analysis.
+- Performance optimizations for high-volume event processing.
 # Author
 
 ### Maneesh Ulari
