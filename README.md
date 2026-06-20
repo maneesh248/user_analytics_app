@@ -63,71 +63,6 @@ This project was built as a Full Stack Engineering assignment to demonstrate eve
 
 ---
 
-# Project Structure
-
-```text
-User_Analytics_App
-│
-├── Backend
-│   │
-│   ├── config
-│   │
-│   ├── models
-│   │   ├── Events.js
-│   │   ├── heatmap.js
-│   │   └── User.js
-│   │
-│   ├── routes
-│   │   ├── auth.js
-│   │   ├── events.js
-│   │   ├── heatmap.js
-│   │   └── sessions.js
-│   │
-│   ├── middleware.js
-│   ├── .env
-│   ├── index.js
-│   ├── log.txt
-│   ├── package.json
-│   └── package-lock.json
-│
-├── Frontend
-│   │
-│   ├── public
-│   │
-│   ├── src
-│   │   │
-│   │   ├── api
-│   │   │
-│   │   ├── assets
-│   │   │
-│   │   ├── components
-│   │   │   ├── Sidebar.jsx
-│   │   │   └── Topbar.jsx
-│   │   │
-│   │   ├── pages
-│   │   │   ├── Login.jsx
-│   │   │   ├── Register.jsx
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── Sessions.jsx
-│   │   │   └── Heatmap.jsx
-│   │   │
-│   │   ├── tracker.js
-│   │   ├── ThemeContext.jsx
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   ├── index.css
-│   │   └── main.jsx
-│   │
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   └── index.html
-│
-└── README.md
-```
-
----
 
 # Installation
 
@@ -362,7 +297,11 @@ Render
 MongoDB Atlas
 
 ---
+## Live Demo
 
+Frontend: https://your-vercel-url.vercel.app
+
+Backend API: https://your-render-url.onrender.com
 # Author
 
 ### Maneesh Ulari
